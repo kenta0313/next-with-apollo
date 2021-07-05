@@ -51,6 +51,16 @@ export default function Home({ countries }) {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+          <div className={styles.grid}>
+            {countries.map((country) => (
+              <div key={country.code} className={styles.card}>
+                <h3>{country.name}</h3>
+                <p>
+                  {country.code} - {country.emoji}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
 
